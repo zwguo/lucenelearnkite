@@ -1,6 +1,7 @@
 package simple;
 
 import org.apache.lucene.analysis.*;
+import org.apache.lucene.util.Version;
 
 import java.io.Reader;
 import java.util.Set;
@@ -30,5 +31,6 @@ public class KiteAnalyzer1 extends Analyzer {
     @Override
     public TokenStream tokenStream(String s, Reader reader) {
         return new StopFilter(true, new LowerCaseFilter(new LetterTokenizer(reader)), stopWords);
+        //return new LetterTokenizer(Version.LUCENE_34, reader);
     }
 }

@@ -1,5 +1,6 @@
 package simple;
 
+import learn.KiteAnalyzer2;
 import org.apache.lucene.analysis.*;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.*;
@@ -19,11 +20,12 @@ public class TokenLearn {
     };
 
     private static final Analyzer[] analyzers = new Analyzer[]{
-            new WhitespaceAnalyzer(),
-            new SimpleAnalyzer(),
-            new StopAnalyzer(Version.LUCENE_34),
-            new StandardAnalyzer(Version.LUCENE_34),
+//            new WhitespaceAnalyzer(),
+//            new SimpleAnalyzer(),
+//            new StopAnalyzer(Version.LUCENE_34),
+//            new StandardAnalyzer(Version.LUCENE_34),
             new KiteAnalyzer1()
+//            new KiteAnalyzer2()
     };
 
     public static void main(String[] args) {
