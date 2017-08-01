@@ -22,7 +22,8 @@ public class TokenLearn {
             new WhitespaceAnalyzer(),
             new SimpleAnalyzer(),
             new StopAnalyzer(Version.LUCENE_34),
-            new StandardAnalyzer(Version.LUCENE_34)
+            new StandardAnalyzer(Version.LUCENE_34),
+            new KiteAnalyzer1()
     };
 
     public static void main(String[] args) {
